@@ -37,7 +37,6 @@ export default Registrationscreen = ({ navigation }) => {
   const handleSubmit = () => {
     setIsShowKeyboard(false);
     Keyboard.dismiss();
-    console.log(state);
     setState(initialState);
   };
 

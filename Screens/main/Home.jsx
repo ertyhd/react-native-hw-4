@@ -47,6 +47,17 @@ const HomeTabs = ({ navigation }) => {
       />
       <MainTab.Screen
         options={{
+          headerLeft: () => (
+            <TouchableOpacity
+              style={{ marginLeft: 18 }}
+              onPress={() => navigation.navigate("Posts")}
+            >
+              <Image
+                source={require("../../assets/png/arrowLeft.png")}
+                style={{ width: 24, height: 24 }}
+              />
+            </TouchableOpacity>
+          ),
           title: "Create posts",
           headerTintColor: "#212121",
           headerTitleStyle: {
@@ -61,6 +72,7 @@ const HomeTabs = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <SvgCreatePosts name="Plus" color={color} size={size} />
           ),
+          tabBarStyle: { display: "none" },
           tabBarShowLabel: false,
         }}
         name="Create posts"
